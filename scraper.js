@@ -1,8 +1,8 @@
 const request = require('request');
 const cheerio = require('cheerio');
-import headerData from './private.js'
+const headerData = require('./private.js');
 
-for (let i = 2; i < 62; i++) {
+for (let i = 70; i < 73; i++) {
   request(`https://wanelo.co/stores/shopdevi/followers/${i}`, function (err, response, html) {
    if (!err) {
       let $ = cheerio.load(html);
